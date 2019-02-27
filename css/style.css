@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background: #1abc9c;
+  background-image: linear-gradient(to top left, #0c656d, #ffda0a);
+  font-family: arial;
+  position: relative;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  color: whitesmoke;
+  letter-spacing: 0.4em;
+  font-size: 22px;
+  padding: 10px 5px;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    font-size: 32px;
+    padding: 10px;
+  }
+}
+
+/* main SECTION */
+.main {
+  background: whitesmoke;
+  width: 250px;
+  height: 345px;
+  box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.4);
+  margin: auto;
+}
+@media only screen and (min-width: 768px) {
+  .main {
+    width: 310px;
+    height: 285px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main {
+    width: 410px;
+    height: 375px;
+  }
+}
+
+.box {
+  background: #9b59b6;
+  background-image: linear-gradient(to top left, #0c656d, #ffda0a);
+  background-size: 250%;
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 10px 0 0 10px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1024px) {
+  .box {
+    width: 70px;
+    height: 70px;
+  }
+}
+.play:hover {
+  background: #2ecc71;
+  background-image:linear-gradient(to top left, #0c656d, #ffda0a);
+  background-size: 100%;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* STATUS bar */
+#state {
+  background: #9b59b6;
+  background-image: linear-gradient(to top left, #0c656d, #ffda0a);
+  background-size: 250%;
+  width: 230px;
+  line-height: 25px;
+  float: left;
+  margin: 10px 0 0 10px;
+  padding: 0 10px;
+  color: whitesmoke;
+  font-size: 16px;
+}
+@media only screen and (min-width: 768px) {
+  #state {
+    width: 290px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #state {
+    width: 390px;
+    line-height: 35px;
+  }
+}
+
+#time {
+  float: left;
+}
+#time::after {
+  content: " sec";
+}
+
+#score {
+  float: right;
+}
+#score::after {
+  content: " points";
+}
+
+/* FOOTER */
+footer p {
+  color: whitesmoke;
+  padding: 5px;
+  font-size: 14px;
+  clear: both;
+}
+
+footer p a {
+  color: #333;
+  text-decoration: none;
+}
+footer p a:hover {
+  color: whitesmoke;
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none !important;
+}
+.show {
+  display: block;
+}
+.outlined {
+  outline: solid 2px #34495e;
+}
+
+/* PRE modal window */
+#pre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+#themes {
+  margin: auto;
+  padding: 25px 20px;
+  width: 250px;
+  background: whitesmoke;
+  color: #36a7a2;
+  font-weight: bold;
+  letter-spacing: .05em;
+  border-radius: 2px;
+}
+
+#themes p {
+  margin: 10px auto;
+  padding: 5px 40px;
+  border: solid #36a7a2 1px;
+  border-radius: 2px;
+  background: whitesmoke;
+  color: #36a7a2;
+  cursor: pointer;
+  font-weight: normal;
+}
+#themes p:hover {
+  background-image: linear-gradient(to top left, #0c656d, #ffda0a);
+  background-size: 250%;
+  color: whitesmoke;
+}
+
+/* POST modal window */
+#post {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+
+#post > div {
+  width: 300px;
+  padding: 20px 0 40px;
+  background: whitesmoke;
+  color: #36a7a2;
+  border-radius: 2px;
+}
+
+#post p:first-child, #post #final {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin: auto;
+  padding: 10px 20px;
+}
+
+#post #again {
+  color: #36a7a2;
+  text-decoration: none;
+  margin: auto;
+  padding: 10px 20px;
+  width: 160px;
+  border: solid #36a7a2 1px;
+  border-radius: 2px;
+}
+#post #again:hover {
+  background: #27ae60;
+  background-image: linear-gradient(to top left, #0c656d, #ffda0a);
+  background-size: 250%;
+  color: whitesmoke;
+  cursor: pointer;
+}
